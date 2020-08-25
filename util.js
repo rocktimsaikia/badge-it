@@ -21,7 +21,7 @@ const _getBadgeLinks = (badges, {owner, repo}, style) => {
 
 			case 'version':
 				updatedStyle = 'flat';
-				badgeLink = setStyle(`/github/manifest-json/v/${owner}/${repo}?style=${updatedStyle}`);
+				badgeLink = setStyle(`/github/package-json/v/${owner}/${repo}?style=${updatedStyle}`);
 				newBadges.push(badgeLink);
 				break;
 

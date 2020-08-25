@@ -28,7 +28,7 @@ Currently It only supports github based badges for specfic the limitation of Git
 ## Available Badges
 
 - <img alt="GitHub" src="https://img.shields.io/github/license/RocktimSaikia/badge-it"/>  -  License
-- <img alt="GitHub" src="https://img.shields.io/github/manifest-json/v/RocktimSaikia/badge-it"/>  -  Version
+- <img alt="GitHub" src="https://img.shields.io/github/package-json/v/rocktimsaikia/badge-it">  -  Version
 - <img alt="GitHub" src="https://img.shields.io/github/stars/RocktimSaikia/badge-it"/>  -  Stars
 - <img alt="GitHub" src="https://img.shields.io/github/forks/RocktimSaikia/badge-it?label=Fork?"/>  -  Fork counts
 - <img alt="GitHub" src="https://img.shields.io/github/Followers/RocktimSaikia?label=Follow?"/>  -  Followers counts
