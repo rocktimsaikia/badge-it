@@ -21,9 +21,9 @@ Currently It only supports github based badges for specfic restrictions of Githu
 
 ## Inputs
 
-- GITHUB\_TOKEN - A personal Github token.
-- badges - Name of the badges to add to your README.
-- badge-style - The style type for your badges.
+- **GITHUB\_TOKEN** - A personal Github token.
+- **badges** - Name of the badges to add to your README.
+- **badge-style** - The style type for your badges.
 
 <!-- -->
 
