@@ -32,11 +32,11 @@ Currently It only supports github based badges for specfic restrictions of Githu
 - ![GitHub](<https://img.shields.io/github/license/RocktimSaikia/badge-it>) \- License
 - ![GitHub](<https://img.shields.io/github/package-json/v/rocktimsaikia/badge-it>) \- Version
 - ![GitHub](<https://img.shields.io/github/stars/RocktimSaikia/badge-it>) \- Stars
-- ![GitHub](<https://img.shields.io/github/forks/RocktimSaikia/badge-it?label=Fork?>) \- Fork counts
+- ![GitHub](<https://img.shields.io/github/forks/RocktimSaikia/badge-it?label=Fork>) \- Fork counts
 - ![GitHub](<https://img.shields.io/github/followers/RocktimSaikia?label=Followers>) \- Followers counts
-- ![GitHub](<https://img.shields.io/github/issues-raw/RocktimSaikia/badge-it?>) \- Open issues
+- ![GitHub](<https://img.shields.io/github/issues-raw/RocktimSaikia/badge-it>) \- Open issues
 - ![GitHub](<https://img.shields.io/github/issues-closed-raw/RocktimSaikia/badge-it?>) \- Closed issues
-- ![GitHub](<https://img.shields.io/github/issues-pr/RocktimSaikia/badge-it?>) \- Closed issues
+- ![GitHub](<https://img.shields.io/github/issues-pr/RocktimSaikia/badge-it>) \- Closed issues
 
 <!-- -->
 
