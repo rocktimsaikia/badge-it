@@ -1,4 +1,4 @@
-# badge-it [![Build Status](https://github.com/rocktimsaikia/badge-it/workflows/build/badge.svg)]
+# badge-it ![Build Status](https://github.com/rocktimsaikia/badge-it/workflows/build/badge.svg)
 
 > Github action to automatically add [sheild badges][shield] to your README.md :zap:
 
@@ -44,5 +44,5 @@ Thats could a be seperate issue on itself.
 ## Related
 - [node-encoder](https://github/com/rocktimsaikia/node-encoder) - Encode and decode `base64` based strings.
 
-[hackathon] : https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn
-[shield] : https://shields.io/
+[hackathon]: https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn
+[shield]: https://shields.io/
