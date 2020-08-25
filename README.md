@@ -44,5 +44,6 @@ Thats could a be seperate issue on itself.
 ## Related
 - [node-encoder](https://github/com/rocktimsaikia/node-encoder) - Encode and decode `base64` based strings.
 
-[hackathon] : https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn
-[shield] : https://shields.io/
+
+[hackathon]: https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn
+[shield]: https://shields.io/
