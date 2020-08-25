@@ -18,6 +18,7 @@ class GenerateBadges {
 		this.octokit = github.getOctokit(this.token);
 		this.repoInfo = github.context.repo;
 		this.repoSha = github.context.sha;
+		this.action = github.context.payload.action;
 		this.mdParser = new showdown.Converter();
 	}
 
@@ -31,7 +32,6 @@ class GenerateBadges {
 		const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
 
 		const updatedReadme = htmlContent.replace(header.outerHTML, newHeader);
-
 		const updatedReadmeMd = this.mdParser.makeMarkdown(updatedReadme, document);
 
 		return updatedReadmeMd;
@@ -47,10 +47,8 @@ class GenerateBadges {
 
 	async init() {
 		try {
-			if (github.context.payload.action) {
-				if (github.context.payload.action !== 'closed') {
-					return;
-				}
+			if (this.action && this.action !== 'closed') {
+				return;
 			}
 
 			const {data: {sha, content: preContent}} = await this.octokit.request(`GET ${this._getReadmeEndpoint()}`, {
