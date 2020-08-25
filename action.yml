@@ -1,5 +1,5 @@
-name: 'awesome-project'
-description: 'My astounding action'
+name: 'badge-it'
+description: 'Add badges to README.md automatically.'
 inputs:
   GITHUB_TOKEN:
     description: 'github personal token'
@@ -8,6 +8,10 @@ inputs:
     description: 'A string array of names of the badges to add'
   badge-style: 
     description: 'The prefered badge style'
+
+branding:
+  icon: "box"
+  color: "black"
 
 runs:
   using: 'node12'
