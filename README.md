@@ -3,9 +3,8 @@
 > Github action to automatically add [sheild badges][shield] to your README.md :zap:
 
 A Github action to add badges in your `README.md` without any hassle. We love badges but generially it's a tedious job to copy paste badges from [shield.io][shield] to your `README.md` .So this Action helps to add badges without you having to do all the copy pasting and configuration.
-
+#### [DEMO REPO](https://github.com/RocktimSaikia/badge-it-demo)
 Currently It only supports github based badges for specfic restrictions of Github actions.
-
 [This action is a submission to [dev.to actionshackathon][hackathon] event. But feel free this action to use it in any of your projects.]
 
 
