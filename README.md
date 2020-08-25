@@ -8,7 +8,7 @@ Currently It only supports github based badges for specfic restrictions of Githu
 
 [This action is a submission to [dev.to actionshackathon][hackathon] event. But feel free this action to use it in any of your projects.]
 
-<br>
+
 ## Usage
 ```yml
       - name: Add Badges
@@ -18,14 +18,14 @@ Currently It only supports github based badges for specfic restrictions of Githu
           badges: 'license,version,github_stars'
           badge-style: 'flat-sqaure'
 ```
-<br>
+
 ## Inputs
 
 - GITHUB_TOKEN -  A personal Github token.
 - badges - Name of the badges to add to your README.
 - badge-style - The style type for your badges.
 
-<br>
+
 ## Available Badges
 
 - <img alt="GitHub" src="https://img.shields.io/github/license/RocktimSaikia/badge-it"/>  -  License
@@ -37,13 +37,13 @@ Currently It only supports github based badges for specfic restrictions of Githu
 - <img alt="GitHub" src="https://img.shields.io/github/issues-closed-raw/RocktimSaikia/badge-it?"/>  -  Closed issues
 - <img alt="GitHub" src="https://img.shields.io/github/issues-pr/RocktimSaikia/badge-it?"/>  -  Closed issues
 
-<br>
+
 ## Todo
 There are many more badges that can be added here. If you want to contribute open a [issue][] to discuss before hand.
 Currenly this action accepts only specifically `Github` related badges. But badges for `CI` services can also be added here.
 Thats could a be seperate issue on itself.
 
-<br>
+
 ## Related
 - [node-encoder](https://github/com/rocktimsaikia/node-encoder) - Encode and decode `base64` based strings.
 
