@@ -9,6 +9,10 @@ inputs:
   badge-style: 
     description: 'The prefered badge style'
 
+branding:
+  icon: "box"
+  color: "black"
+
 runs:
   using: 'node12'
   main: 'dist/index.js'
