@@ -1,5 +1,9 @@
 name: 'build'
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+      - develop
+      - "releases/*"
 
 jobs:
   test:
@@ -7,8 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: install
-        run: yarn install
-        
-      - name: Linting
-        run: yarn run lint
+      - name: add badges
+        uses: ./
+        with: 
+          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
+          badges: 'license,version,github_stars'
+          badge-style: 'flat-square'

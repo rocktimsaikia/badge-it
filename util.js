@@ -1,6 +1,6 @@
 'use strict';
 
-const _getBadgeLinks = (badges, {owner, repo}, style) => {
+const _getBadgeLinks = (badges, {owner, repo}, style = '') => {
 	const badgeArray = badges.split(',');
 	const newBadges = [];
 
@@ -10,54 +10,46 @@ const _getBadgeLinks = (badges, {owner, repo}, style) => {
 
 	for (let badge of badgeArray) {
 		badge = badge.toLowerCase().trim();
+		const addStyle = style !== '' && `?style=${style}`;
 		let badgeLink;
-		let updatedStyle = style;
 		switch (badge) {
 			case 'license':
-				updatedStyle = 'flat';
-				badgeLink = setStyle(`/github/license/${owner}/${repo}?style=${updatedStyle}`);
+				badgeLink = setStyle(`/github/license/${owner}/${repo}${addStyle}`);
 				newBadges.push(badgeLink);
 				break;
 
 			case 'version':
-				updatedStyle = 'flat';
-				badgeLink = setStyle(`/github/package-json/v/${owner}/${repo}?style=${updatedStyle}`);
+				badgeLink = setStyle(`/github/package-json/v/${owner}/${repo}${addStyle}`);
 				newBadges.push(badgeLink);
 				break;
 
 			case 'github_stars':
-				updatedStyle = 'social';
-				badgeLink = setStyle(`/github/stars/${owner}/${repo}?style=${updatedStyle}`);
+				badgeLink = setStyle(`/github/stars/${owner}/${repo}${addStyle}`);
 				newBadges.push(badgeLink);
 				break;
 
 			case 'github_forks':
-				updatedStyle = 'social';
-				badgeLink = setStyle(`/github/forks/${owner}/${repo}?label=Fork?style=${updatedStyle}`);
+				badgeLink = setStyle(`/github/forks/${owner}/${repo}?label=Fork${addStyle}`);
 				newBadges.push(badgeLink);
 				break;
 
 			case 'github_followers':
-				updatedStyle = 'social';
-				badgeLink = setStyle(`/github/Followers/${owner}?label=Follow?style=${updatedStyle}`);
+				badgeLink = setStyle(`/github/Followers/${owner}?label=Follow${addStyle}`);
 				newBadges.push(badgeLink);
 				break;
 
 			case 'github_open_issues':
-				updatedStyle = 'social';
-				badgeLink = setStyle(`/github/issues-raw/${owner}/${repo}?style=${updatedStyle}`);
+				badgeLink = setStyle(`/github/issues-raw/${owner}/${repo}${addStyle}`);
 				newBadges.push(badgeLink);
 				break;
 
 			case 'github_closed_issues':
-				updatedStyle = 'social';
-				badgeLink = setStyle(`/github/issues-closed-raw/${owner}/${repo}?style=${updatedStyle}`);
+				badgeLink = setStyle(`/github/issues-closed-raw/${owner}/${repo}${addStyle}`);
 				newBadges.push(badgeLink);
 				break;
 
 			case 'github_pull_requests':
-				updatedStyle = 'social';
-				badgeLink = setStyle(`/github/issues-pr/${owner}/${repo}?style=${updatedStyle}`);
+				badgeLink = setStyle(`/github/issues-pr/${owner}/${repo}${addStyle}`);
 				newBadges.push(badgeLink);
 				break;
 
