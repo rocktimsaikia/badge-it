@@ -31,7 +31,7 @@ Currently It only supports github based badges for specfic the limitation of Git
 - <img alt="GitHub" src="https://img.shields.io/github/package-json/v/rocktimsaikia/badge-it">  -  Version
 - <img alt="GitHub" src="https://img.shields.io/github/stars/RocktimSaikia/badge-it"/>  -  Stars
 - <img alt="GitHub" src="https://img.shields.io/github/forks/RocktimSaikia/badge-it?label=Fork?"/>  -  Fork counts
-- <img alt="GitHub" src="https://img.shields.io/github/followers/RocktimSaikia?label=Followers&style=social"/>  -  Followers counts
+- <img alt="GitHub" src="https://img.shields.io/github/followers/RocktimSaikia?label=Followers"/>  -  Followers counts
 - <img alt="GitHub" src="https://img.shields.io/github/issues-raw/RocktimSaikia/badge-it?"/>  -  Open issues
 - <img alt="GitHub" src="https://img.shields.io/github/issues-closed-raw/RocktimSaikia/badge-it?"/>  -  Closed issues
 - <img alt="GitHub" src="https://img.shields.io/github/issues-pr/RocktimSaikia/badge-it?"/>  -  Closed issues
