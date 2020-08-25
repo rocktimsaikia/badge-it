@@ -6,7 +6,7 @@ A Github action to add badges in your `README.md` without any hassle. We love ba
 
 Currently It only supports github based badges for specfic the limitation of Github actions. Like it does not accpets inputs as `objects` or `arrays`. Only strings works for now. But we will update this action when this changes in future.
 
-> This action is a submission to [dev.to actionshackathon][hackathon] event. But feel free this action to use it in any of your projects.
+[This action is a submission to [dev.to actionshackathon][hackathon] event. But feel free this action to use it in any of your projects.]
 
 
 ## Usage
@@ -31,7 +31,7 @@ Currently It only supports github based badges for specfic the limitation of Git
 - <img alt="GitHub" src="https://img.shields.io/github/manifest-json/v/RocktimSaikia/badge-it"/>  -  Version
 - <img alt="GitHub" src="https://img.shields.io/github/stars/RocktimSaikia/badge-it"/>  -  Stars
 - <img alt="GitHub" src="https://img.shields.io/github/forks/RocktimSaikia/badge-it?label=Fork?"/>  -  Fork counts
-- <img alt="GitHub" src="https://img.shields.io/github/Followers/RocktimSaikia?label=Fork?"/>  -  Fork counts
+- <img alt="GitHub" src="https://img.shields.io/github/Followers/RocktimSaikia?label=Follow?"/>  -  Followers counts
 - <img alt="GitHub" src="https://img.shields.io/github/issues-raw/RocktimSaikia/badge-it?"/>  -  Open issues
 - <img alt="GitHub" src="https://img.shields.io/github/issues-closed-raw/RocktimSaikia/badge-it?"/>  -  Closed issues
 - <img alt="GitHub" src="https://img.shields.io/github/issues-pr/RocktimSaikia/badge-it?"/>  -  Closed issues
