@@ -1,0 +1,14 @@
+name: 'awesome-project'
+description: 'My astounding action'
+inputs:
+  GITHUB_TOKEN:
+    description: 'github personal token'
+    required: true
+  badges:
+    description: 'A string array of names of the badges to add'
+  badge-style: 
+    description: 'The prefered badge style'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

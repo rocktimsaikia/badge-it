@@ -1,0 +1,42 @@
+{
+	"name": "badge-it",
+	"version": "1.0.0",
+	"description": "Github action to add badges to your readme automatically",
+	"main": "dist/index.js",
+	"scripts": {
+		"lint": "xo",
+		"build": "ncc build index.js -o dist --source-map"
+	},
+	"engines": {
+		"node": ">=12"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RocktimSaikia/awesome-project.git"
+	},
+	"keywords": [
+		"GitHub",
+		"Actions",
+		"JavaScript"
+	],
+	"author": {
+		"name": "RocktimSaikia",
+		"email": "srocktim61@gmail.com",
+		"website": "https://rocktim.xyz"
+	},
+	"bugs": {
+		"url": "https://github.com/RocktimSaikia/awesome-project/issues"
+	},
+	"homepage": "https://github.com/RocktimSaikia/awesome-project#readme",
+	"dependencies": {
+		"@actions/core": "1.2.4",
+		"@actions/github": "4.0.0",
+		"jsdom": "16.4.0",
+		"node-encoder": "1.0.1",
+		"showdown": "1.9.1"
+	},
+	"devDependencies": {
+		"@vercel/ncc": "0.23.0",
+		"xo": "0.33.0"
+	}
+}
