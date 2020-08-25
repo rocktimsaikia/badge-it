@@ -16,7 +16,7 @@ Currently It only supports github based badges for specfic restrictions of Githu
         with:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
           badges: 'license,version,github_stars'
-          badge-style: 'flat-sqaure'
+          badge-style: 'flat-square'
 ```
 
 ## Inputs
