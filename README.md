@@ -35,8 +35,11 @@ Currently It only supports github based badges .Currently working on adding more
 - ![GitHub](<https://img.shields.io/github/forks/RocktimSaikia/badge-it?label=Fork>) \- Fork counts
 - ![GitHub](<https://img.shields.io/github/followers/RocktimSaikia?label=Followers>) \- Followers counts
 - ![GitHub](<https://img.shields.io/github/issues-raw/RocktimSaikia/badge-it>) \- Open issues
-- ![GitHub](<https://img.shields.io/github/issues-closed-raw/RocktimSaikia/badge-it?>) \- Closed issues
-- ![GitHub](<https://img.shields.io/github/issues-pr/RocktimSaikia/badge-it>) \- Closed issues
+- ![GitHub](<https://img.shields.io/github/issues-closed-raw/RocktimSaikia/badge-it>) \- Closed issues
+- ![GitHub](<https://img.shields.io/github/issues-pr/RocktimSaikia/badge-it>) \- Open pull requests
+- ![GitHub](<https://img.shields.io/david/RocktimSaikia/badge-it>) \- Closed issues
+- ![GitHub](<https://img.shields.io/tracis/com/RocktimSaikia/badge-it>) \- TravisCI/com
+- ![GitHub](<https://img.shields.io/tracis/org/RocktimSaikia/badge-it>) \- TravisCI/org
 
 <!-- -->
 
