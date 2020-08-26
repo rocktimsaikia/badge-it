@@ -39,6 +39,8 @@ For now it only supports github based badges .Currently working on adding more b
 - ![GitHub](https://img.shields.io/github/issues-raw/RocktimSaikia/badge-it) \- Open issues
 - ![GitHub](https://img.shields.io/github/issues-closed-raw/RocktimSaikia/badge-it) \- Closed issues
 - ![GitHub](https://img.shields.io/github/issues-pr/RocktimSaikia/badge-it) \- Open pull requests
+- ![GitHub](https://img.shields.io/github/repo-size/RocktimSaikia/badge-it) \- Repo Size
+- ![GitHub](https://img.shields.io/github/languages/code-size/RocktimSaikia/badge-it) \- Code Size
 - ![GitHub](https://img.shields.io/david/RocktimSaikia/badge-it) \- Closed issues
 - ![GitHub](https://travis-ci.com/RocktimSaikia/badge-it.svg?branch=master) \- TravisCI/com
 - ![GitHub](https://travis-ci.org/RocktimSaikia/badge-it.svg?branch=master) \- TravisCI/org
