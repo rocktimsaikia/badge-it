@@ -1,6 +1,6 @@
 # badge-it ![Build Status](<https://github.com/rocktimsaikia/badge-it/workflows/build/badge.svg>)
 
-> Github action to automatically add [sheild badges](<https://shields.io/>) to your README.md :zap:
+> Github action to automatically add [shield badges](<https://shields.io/>) to your README.md :zap:
 
 A Github action to add badges in your `README.md` without any hassle. We love badges but generially it's a tedious job to copy paste badges from [shield.io](<https://shields.io/>) to your `README.md` .So this Action helps to add badges without you having to do all the copy pasting and configuration.
 
@@ -42,7 +42,7 @@ Currently It only supports github based badges .Currently working on adding more
 
 ## Todo
 
-There are many more badges that can be added here. If you want to contribute open a [issue][] to discuss before hand. Currenly this action accepts only specifically `Github` related badges. But badges for `CI` services can also be added here. Thats could a be seperate issue on itself.
+There are many more badges that can be added here. If you want to contribute [open a issue](https://github.com/RocktimSaikia/badge-it/issues/new) to discuss before hand. Currenly this action accepts only specifically `Github` related badges. But badges for `CI` services can also be added here. Thats could a be seperate issue on itself.
 
 ## Related
 
