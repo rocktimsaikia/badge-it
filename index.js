@@ -23,10 +23,22 @@ class GenerateBadges {
 	}
 
 	_addBadges(content) {
+		const badges = util._getBadgeLinks(this.inputBadges, this.repoInfo, this.badgeStyle);
+
+		// If the readme header is in html then don't markdown it.
+		if (content.cotains('<h1>')) {
+			const {window: {document}} = new JSDOM(content);
+			const header = document.querySelector('h1:nth-child(1)');
+
+			const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
+			const updatedReadme = htmlContent.replace(header.outerHTML, newHeader);
+
+			return updatedReadme;
+		}
+
+		// If header is in markfdown then make it html
 		const htmlContent = this.mdParser.makeHtml(content);
 		const {window: {document}} = new JSDOM(htmlContent);
-
-		const badges = util._getBadgeLinks(this.inputBadges, this.repoInfo, this.badgeStyle);
 
 		const header = document.querySelector('h1:nth-child(1)');
 		const newHeader = `<h1>${header.textContent} ${badges}</h1>`;

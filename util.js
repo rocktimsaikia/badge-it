@@ -5,7 +5,7 @@ const _getBadgeLinks = (badges, {owner, repo}, style = '') => {
 	const newBadges = [];
 
 	const setStyle = content => {
-		return `<img alt="GitHub" src="https://img.shields.io${content}"/>`;
+		return `<img alt="GitHub" src="https://img.shields.io${content}">`;
 	};
 
 	for (let badge of badgeArray) {
