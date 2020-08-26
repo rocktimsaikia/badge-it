@@ -69,7 +69,8 @@ class GenerateBadges {
 			const {data: {sha, content: preContent}} = await this.octokit.request(`GET ${this._getReadmeEndpoint()}`, {
 				headers: {
 					authorization: `token ${this.token}`
-				}
+				},
+				ref: this.currentBranch
 			});
 
 			const readmeContent = _decode(preContent);
