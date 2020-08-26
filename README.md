@@ -6,7 +6,9 @@ A Github action to add badges in your `README.md` without any hassle. We love ba
 
 #### [DEMO REPO](<https://github.com/RocktimSaikia/badge-it-demo>)
 
-Currently It only supports github based badges .Currently working on adding more badges. [This action is a submission to [dev.to actionshackathon](<https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn>) event. But feel free this action to use it in any of your projects.]
+For now it only supports github based badges .Currently working on adding more badges. 
+
+[This action is a submission to [dev.to actionshackathon](<https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn>) event. But feel free this action to use it in any of your projects.]
 
 ## Usage
 
