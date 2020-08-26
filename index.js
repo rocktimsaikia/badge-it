@@ -26,7 +26,7 @@ class GenerateBadges {
 		const badges = util._getBadgeLinks(this.inputBadges, this.repoInfo, this.badgeStyle);
 
 		// If the readme header is in html then don't markdown it.
-		if (content.cotains('<h1>')) {
+		if (content.includes('<h1>')) {
 			const {window: {document}} = new JSDOM(content);
 			const header = document.querySelector('h1:nth-child(1)');
 
