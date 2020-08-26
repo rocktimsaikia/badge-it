@@ -17,24 +17,39 @@ class GenerateBadges {
 
 		this.octokit = github.getOctokit(this.token);
 		this.repoInfo = github.context.repo;
+		this.currentBranch = github.context.ref.slice(11);
 		this.repoSha = github.context.sha;
 		this.action = github.context.payload.action;
 		this.mdParser = new showdown.Converter();
 	}
 
 	_addBadges(content) {
+		const badges = util._getBadgeLinks(this.inputBadges, this.repoInfo, this.badgeStyle);
+
+		// If the readme header is in html then don't markdown it.
+		if (content.includes('<h1>')) {
+			const {window: {document}} = new JSDOM(content);
+			const header = document.querySelector('h1:nth-child(1)');
+
+			const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
+			const updatedReadme = htmlContent.replace(header.outerHTML, newHeader);
+
+			return updatedReadme;
+		}
+
+		// If header is in markfdown then make it html
 		const htmlContent = this.mdParser.makeHtml(content);
 		const {window: {document}} = new JSDOM(htmlContent);
 
-		const badges = util._getBadgeLinks(this.inputBadges, this.repoInfo, this.badgeStyle);
-
 		const header = document.querySelector('h1:nth-child(1)');
+		const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
+
 		const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
+		const newHeaderMd = this.mdParser.makeMarkdown(newHeader, document).replace(/,/gm, ' ');
 
-		const updatedReadme = htmlContent.replace(header.outerHTML, newHeader);
-		const updatedReadmeMd = this.mdParser.makeMarkdown(updatedReadme, document);
+		const updatedReadme = content.replace(headerMd, newHeaderMd);
 
-		return updatedReadmeMd;
+		return updatedReadme;
 	}
 
 	_getReadmeEndpoint() {
@@ -54,7 +69,8 @@ class GenerateBadges {
 			const {data: {sha, content: preContent}} = await this.octokit.request(`GET ${this._getReadmeEndpoint()}`, {
 				headers: {
 					authorization: `token ${this.token}`
-				}
+				},
+				ref: this.currentBranch
 			});
 
 			const readmeContent = _decode(preContent);
@@ -73,6 +89,7 @@ class GenerateBadges {
 					},
 					message: 'chore: add badges :unicorn:',
 					content: encoded64Content,
+					branch: this.currentBranch,
 					sha
 				});
 			}

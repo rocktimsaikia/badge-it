@@ -5,7 +5,7 @@ const _getBadgeLinks = (badges, {owner, repo}, style = '') => {
 	const newBadges = [];
 
 	const setStyle = content => {
-		return `<img alt="GitHub" src="https://img.shields.io${content}"/>`;
+		return `<img alt="GitHub" src="https://img.shields.io${content}">`;
 	};
 
 	for (let badge of badgeArray) {
@@ -29,12 +29,12 @@ const _getBadgeLinks = (badges, {owner, repo}, style = '') => {
 				break;
 
 			case 'gh_forks':
-				badgeLink = setStyle(`/github/forks/${owner}/${repo}?label=Fork${addStyle}`);
+				badgeLink = setStyle(`/github/forks/${owner}/${repo}${addStyle}`);
 				newBadges.push(badgeLink);
 				break;
 
 			case 'gh_followers':
-				badgeLink = setStyle(`/github/Followers/${owner}?label=Follow${addStyle}`);
+				badgeLink = setStyle(`/github/Followers/${owner}${addStyle}`);
 				newBadges.push(badgeLink);
 				break;
 
@@ -83,7 +83,7 @@ const _getBadgeLinks = (badges, {owner, repo}, style = '') => {
 		}
 	}
 
-	return newBadges.join(',').replace(/,/gm, ' ');
+	return newBadges.join(',');
 };
 
 module.exports = {
