@@ -68,6 +68,16 @@ const _getBadgeLinks = (badges, {owner, repo}, style = '') => {
 				newBadges.push(badgeLink);
 				break;
 
+			case 'code_size':
+				badgeLink = setStyle(`/github/languages/code-size/${owner}/${repo}${addStyle}`);
+				newBadges.push(badgeLink);
+				break;
+
+			case 'repo_size':
+				badgeLink = setStyle(`/github/repo-size/${owner}/${repo}${addStyle}`);
+				newBadges.push(badgeLink);
+				break;
+
 			default:
 				break;
 		}
