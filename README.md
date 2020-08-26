@@ -6,18 +6,18 @@ A Github action to add badges in your `README.md` without any hassle. We love ba
 
 #### [DEMO REPO](<https://github.com/RocktimSaikia/badge-it-demo>)
 
-For now it only supports github based badges .Currently working on adding more badges. 
-
-[This action is a submission to [dev.to actionshackathon](<https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn>) event. But feel free this action to use it in any of your projects.]
-
 ## Usage
+
+- **Badges** - To add your preffered badge, check it's correspoding `key` in the ***`Availabe Badges`*** section below and add the key in the `badges` input seperated by `commas ( ,)`.
+
+- **Badge Style** - To specifiy style for your badges .Add your preffered badge style in the `badge-style` input. Default is `flat`.
 
 ```yml
 - name: Add Badges
   uses: rocktimsaikia/badge-it@master
   with:
     GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
-    badges: 'license,version,github_stars'
+    badges: 'gh_license, gh_version, gh_stars'
     badge-style: 'flat-square'
 ```
 
@@ -31,18 +31,21 @@ For now it only supports github based badges .Currently working on adding more b
 
 ## Available Badges
 
-- ![GitHub](https://img.shields.io/github/license/RocktimSaikia/badge-it) \- License
-- ![GitHub](https://img.shields.io/github/package-json/v/rocktimsaikia/badge-it) \- Version
-- ![GitHub](https://img.shields.io/github/stars/RocktimSaikia/badge-it) \- Stars
-- ![GitHub](https://img.shields.io/github/forks/RocktimSaikia/badge-it?label=Fork) \- Fork counts
-- ![GitHub](https://img.shields.io/github/followers/RocktimSaikia?label=Followers) \- Followers counts
-- ![GitHub](https://img.shields.io/github/issues-raw/RocktimSaikia/badge-it) \- Open issues
-- ![GitHub](https://img.shields.io/github/issues-closed-raw/RocktimSaikia/badge-it) \- Closed issues
-- ![GitHub](https://img.shields.io/github/issues-pr/RocktimSaikia/badge-it) \- Open pull requests
-- ![GitHub](https://img.shields.io/david/RocktimSaikia/badge-it) \- Closed issues
-- ![GitHub](https://travis-ci.com/RocktimSaikia/badge-it.svg?branch=master) \- TravisCI/com
-- ![GitHub](https://travis-ci.org/RocktimSaikia/badge-it.svg?branch=master) \- TravisCI/org
+> ***Keys*** are enclosed in `brackets ()`
 
+- ![GitHub](https://img.shields.io/github/license/RocktimSaikia/badge-it) \- Github license `( gh_license )`
+- ![GitHub](https://img.shields.io/github/package-json/v/rocktimsaikia/badge-it) \- Package.json version `( gh_version)`
+- ![GitHub](https://img.shields.io/github/stars/RocktimSaikia/badge-it) \- Stars `( gh_stars)`
+- ![GitHub](https://img.shields.io/github/forks/RocktimSaikia/badge-it?label=Fork) \- Fork counts `( gh_forks)`
+- ![GitHub](https://img.shields.io/github/followers/RocktimSaikia?label=Followers) \- Followers counts `( gh_followers)`
+- ![GitHub](https://img.shields.io/github/issues-raw/RocktimSaikia/badge-it) \- Open issues `( gh_open_issues)`
+- ![GitHub](https://img.shields.io/github/issues-closed-raw/RocktimSaikia/badge-it) \- Closed issues `( gh_closed_issues)`
+- ![GitHub](https://img.shields.io/github/issues-pr/RocktimSaikia/badge-it) \- open pull requests `( gh_open_pr)`
+- ![GitHub](https://img.shields.io/david/RocktimSaikia/badge-it) \- All dependecnies `( gh_dependencies)`
+- ![GitHub](https://img.shields.io/github/repo-size/RocktimSaikia/badge-it) \- Repo Size `( gh_repo_size)`
+- ![GitHub](https://img.shields.io/github/languages/code-size/RocktimSaikia/badge-it) \- Code Size `( gh_code_size)`
+- ![GitHub](https://travis-ci.com/RocktimSaikia/badge-it.svg?branch=master) \- TravisCI.com `( travis_com)`
+- ![GitHub](https://travis-ci.org/RocktimSaikia/badge-it.svg?branch=master) \- TravisCI.org key`( travis_org)`
 <!-- -->
 
 ## Todo
