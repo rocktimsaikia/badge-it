@@ -17,7 +17,7 @@ A Github action to add badges in your `README.md` without any hassle. We love ba
   uses: rocktimsaikia/badge-it@master
   with:
     GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
-    badges: 'license,version,github_stars'
+    badges: 'gh_license, gh_version, gh_stars'
     badge-style: 'flat-square'
 ```
 
