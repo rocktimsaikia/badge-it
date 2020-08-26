@@ -53,6 +53,21 @@ const _getBadgeLinks = (badges, {owner, repo}, style = '') => {
 				newBadges.push(badgeLink);
 				break;
 
+			case 'travis/com':
+				badgeLink = setStyle(`/travis/com/${owner}/${repo}${addStyle}`);
+				newBadges.push(badgeLink);
+				break;
+
+			case 'travis/org':
+				badgeLink = setStyle(`/travis/org/${owner}/${repo}${addStyle}`);
+				newBadges.push(badgeLink);
+				break;
+
+			case 'dependencies':
+				badgeLink = setStyle(`/david/${owner}/${repo}${addStyle}`);
+				newBadges.push(badgeLink);
+				break;
+
 			default:
 				break;
 		}
