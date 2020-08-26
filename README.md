@@ -12,11 +12,11 @@ Currently It only supports github based badges .Currently working on adding more
 
 ```yml
 - name: Add Badges
-        uses: rocktimsaikia/badge-it@master
-        with:
-          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
-          badges: 'license,version,github_stars'
-          badge-style: 'flat-square'
+  uses: rocktimsaikia/badge-it@master
+  with:
+    GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
+    badges: 'license,version,github_stars'
+    badge-style: 'flat-square'
 ```
 
 ## Inputs
