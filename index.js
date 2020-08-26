@@ -17,6 +17,7 @@ class GenerateBadges {
 
 		this.octokit = github.getOctokit(this.token);
 		this.repoInfo = github.context.repo;
+		this.currentBranch = github.context.ref.slice(11);
 		this.repoSha = github.context.sha;
 		this.action = github.context.payload.action;
 		this.mdParser = new showdown.Converter();
@@ -41,12 +42,14 @@ class GenerateBadges {
 		const {window: {document}} = new JSDOM(htmlContent);
 
 		const header = document.querySelector('h1:nth-child(1)');
+		const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
+
 		const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
+		const newHeaderMd = this.mdParser.makeMarkdown(newHeader, document).replace(/,/gm, ' ');
 
-		const updatedReadme = htmlContent.replace(header.outerHTML, newHeader);
-		const updatedReadmeMd = this.mdParser.makeMarkdown(updatedReadme, document);
+		const updatedReadme = content.replace(headerMd, newHeaderMd);
 
-		return updatedReadmeMd;
+		return updatedReadme;
 	}
 
 	_getReadmeEndpoint() {
@@ -85,6 +88,7 @@ class GenerateBadges {
 					},
 					message: 'chore: add badges :unicorn:',
 					content: encoded64Content,
+					branch: this.currentBranch,
 					sha
 				});
 			}
