@@ -32,7 +32,7 @@
 		"@actions/core": "1.2.4",
 		"@actions/github": "4.0.0",
 		"jsdom": "16.4.0",
-		"node-encoder": "2.0.1",
+		"node-encoder": "1.0.1",
 		"showdown": "1.9.1"
 	},
 	"devDependencies": {
