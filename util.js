@@ -7,6 +7,29 @@ const _getBadgeLinks = (badges, {owner, repo}, style = '') => {
 	const setStyle = content => {
 		return `<img alt="GitHub" src="https://img.shields.io${content}">`;
 	};
+	/** Todo: Fun badges
+		![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)
+
+		![forthebadge](https://forthebadge.com/images/badges/gluten-free.svg)
+
+		![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
+
+		![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)
+
+		![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)
+
+		![forthebadge](https://forthebadge.com/images/badges/built-by-codebabes.svg)
+
+		![forthebadge](https://forthebadge.com/images/badges/built-with-swag.svg)
+
+		![forthebadge](https://forthebadge.com/images/badges/designed-in-ms-paint.svg)
+
+		![forthebadge](https://forthebadge.com/images/badges/kinda-sfw.svg)
+
+		![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)
+
+		![forthebadge](https://forthebadge.com/images/badges/contains-cat-gifs.svg)
+	 */
 
 	for (let badge of badgeArray) {
 		badge = badge.toLowerCase().trim();
