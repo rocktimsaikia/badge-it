@@ -1,18 +1,18 @@
 dependencies:
-  '@actions/core': 1.2.4
+  '@actions/core': 1.2.5
   '@actions/github': 4.0.0
   jsdom: 16.4.0
   node-encoder: 2.0.1
   showdown: 1.9.1
 devDependencies:
-  '@vercel/ncc': 0.23.0
-  xo: 0.33.0
+  '@vercel/ncc': 0.24.0
+  xo: 0.33.1
 lockfileVersion: 5.1
 packages:
-  /@actions/core/1.2.4:
+  /@actions/core/1.2.5:
     dev: false
     resolution:
-      integrity: sha512-YJCEq8BE3CdN8+7HPZ/4DxJjk/OkZV2FFIf+DlZTC/4iBlzYCD5yjRR6eiOS5llO11zbRltIRuKAjMKaWTE6cg==
+      integrity: sha512-mwpoNjHSWWh0IiALdDEQi3tru124JKn0yVNziIBzTME8QRv7thwoghVuT1jBRjFvdtoHsqD58IRHy1nf86paRg==
   /@actions/github/4.0.0:
     dependencies:
       '@actions/http-client': 1.0.8
@@ -369,11 +369,11 @@ packages:
       node: ^8.10.0 || ^10.13.0 || >=11.10.1
     resolution:
       integrity: sha512-9JgC82AaQeglebjZMgYR5wgmfUdUc+EitGUUMW8u2nDckaeimzW+VsoLV6FoimPv2id3VQzfjwBxEMVz08ameQ==
-  /@vercel/ncc/0.23.0:
+  /@vercel/ncc/0.24.0:
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-Fcr1qlG9t54X4X9qbo/+jr1+t5Qc6H3TgIRBXmKkF/WDs6YFulAN6ilq2Ehx38RbgIOFxaZnjlAQ50GyexnMpQ==
+      integrity: sha512-crqItMcIwCkvdXY/V3/TzrHJQx6nbIaRqE1cOopJhgGX6izvNov40SmD//nS5flfEvdK54YGjwVVq+zG6crjOg==
   /abab/2.0.4:
     dev: false
     resolution:
@@ -4928,7 +4928,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==
-  /xo/0.33.0:
+  /xo/0.33.1:
     dependencies:
       '@typescript-eslint/eslint-plugin': 3.10.1_6a22fa4fe8bc6ecce690fddc7e030a84
       '@typescript-eslint/parser': 3.10.1_eslint@7.8.1+typescript@3.9.7
@@ -4978,7 +4978,7 @@ packages:
       node: '>=10.18'
     hasBin: true
     resolution:
-      integrity: sha512-9fUpHn9w2trvZSatInPfscwQVO3f60nXcTelg4GV6u0/+aqx3DPEdEliWFN7cmtUUf8sofZH3Itjg8Txnvzv3A==
+      integrity: sha512-kH/qjKzvhkXPRwFnf4WpiGb2509eyk1J1791Jtxpr7LlGiGtOtSo5PQpHaUrvRusAbAv967wGMBtG48j3eGLQA==
   /xtend/4.0.2:
     dev: true
     engines:
@@ -5028,10 +5028,10 @@ packages:
     resolution:
       integrity: sha512-ZbotRWhF+lkjijC/VhmOT9wSgyBQ7+zr13+YLkhfsSiTriYsMzkTUFP18pFhWwBeMa5gUc1MzbhrO6/VB7c9Xg==
 specifiers:
-  '@actions/core': 1.2.4
-  '@actions/github': 4.0.0
-  '@vercel/ncc': 0.23.0
-  jsdom: 16.4.0
-  node-encoder: 2.0.1
-  showdown: 1.9.1
-  xo: 0.33.0
+  '@actions/core': ^1.2.5
+  '@actions/github': ^4.0.0
+  '@vercel/ncc': ^0.24.0
+  jsdom: ^16.4.0
+  node-encoder: ^2.0.1
+  showdown: ^1.9.1
+  xo: ^0.33.1
