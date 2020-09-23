@@ -71,8 +71,10 @@ class GenerateBadges {
 
 		console.log('MARKDOWN README running');
 		const strs = '# DbInstallation';
-		console.log(String(content).includes(strs));
-		console.log(String(content).indexOf(strs));
+		const strgContent = String(content);
+		console.log(strgContent);
+		console.log(strgContent.includes(strs));
+		console.log(strgContent.indexOf(strs));
 
 		console.log(`header: ${headerMd}`);
 		console.log(`updatedReadme T: ${content}`);
