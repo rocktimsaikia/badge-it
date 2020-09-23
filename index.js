@@ -70,9 +70,9 @@ class GenerateBadges {
 		const updatedReadme = content.replace(headerMd, newHeaderMd);
 
 		console.log('MARKDOWN README running');
-		console.log(`content: ${content}`);
-		console.log(`header: ${headerMd}`);
-		console.log(`newHeader: ${newHeaderMd}`);
+		console.log(`content: ${typeof content}`);
+		console.log(`header: ${typeof headerMd}`);
+		console.log(`newHeader: ${typeof newHeaderMd}`);
 		console.log(`updatedReadme T: ${String(content).replace(headerMd, newHeaderMd)}`);
 
 		return updatedReadme;
