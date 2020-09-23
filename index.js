@@ -2,8 +2,13 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const showdown = require('showdown');
 const jsDom = require('jsdom');
-const {JSDOM} = jsDom;
-const {encode, decode} = require('node-encoder');
+const {
+	JSDOM
+} = jsDom;
+const {
+	encode,
+	decode
+} = require('node-encoder');
 const util = require('./util');
 
 /**
@@ -33,12 +38,14 @@ class GenerateBadges {
 		// If the readme header is in html then don't markdown it.
 		if (content.includes('<h1>')) {
 			const {
-				window: {document}
+				window: {
+					document
+				}
 			} = new JSDOM(content);
 			const header = document.querySelector('h1:nth-child(1)');
 
 			const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
-			const updatedReadme = htmlContent.replace(header.outerHTML, newHeader);
+			const updatedReadme = content.replace(header.outerHTML, newHeader);
 
 			return updatedReadme;
 		}
@@ -46,7 +53,9 @@ class GenerateBadges {
 		// If header is in markfdown then make it html
 		const htmlContent = this.mdParser.makeHtml(content);
 		const {
-			window: {document}
+			window: {
+				document
+			}
 		} = new JSDOM(htmlContent);
 
 		const header = document.querySelector('h1:nth-child(1)');
@@ -72,12 +81,11 @@ class GenerateBadges {
 
 	async init() {
 		try {
-			if (this.action && this.action !== 'closed') {
-				return;
-			}
-
 			const {
-				data: {sha, content: preContent}
+				data: {
+					sha,
+					content: preContent
+				}
 			} = await this.octokit.request(`GET ${this._getReadmeEndpoint()}`, {
 				headers: {
 					authorization: `token ${this.token}`
