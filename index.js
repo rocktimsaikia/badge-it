@@ -28,7 +28,7 @@ class GenerateBadges {
 		this.mdParser = new showdown.Converter();
 	}
 
-	async _addBadges(content) {
+	_addBadges(content) {
 		const badges = util._getBadgeLinks(
 			this.inputBadges,
 			this.repoInfo,
@@ -45,46 +45,29 @@ class GenerateBadges {
 			const header = document.querySelector('h1:nth-child(1)');
 
 			const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
-			const updatedReadme = content.replace(header.outerHTML, newHeader);
+			const updatedReadme = htmlContent.replace(header.outerHTML, newHeader);
 
 			console.log('HTML README running');
 			return updatedReadme;
 		}
 
-		const createMarkDown = async () => {
-			// If header is in markfdown then make it html
-			const htmlContent = this.mdParser.makeHtml(content);
-			const {
-				window: {
-					document
-				}
-			} = new JSDOM(htmlContent);
-
-			const header = document.querySelector('h1:nth-child(1)');
-			const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
-
-			const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
-			const newHeaderMd = this.mdParser
-				.makeMarkdown(newHeader, document)
-				.replace(/,/gm, ' ');
-
-			return {
-				headerMd,
-				newHeaderMd
-			};
-		};
-
-		console.log('MARKDOWN README running');
+		// If header is in markfdown then make it html
+		const htmlContent = this.mdParser.makeHtml(content);
 		const {
-			headerMd,
-			newHeaderMd
-		} = await createMarkDown();
+			window: {
+				document
+			}
+		} = new JSDOM(htmlContent);
+
+		const header = document.querySelector('h1:nth-child(1)');
+		const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
+
+		const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
+		const newHeaderMd = this.mdParser
+			.makeMarkdown(newHeader, document)
+			.replace(/,/gm, ' ');
 
 		const updatedReadme = content.replace(headerMd, newHeaderMd);
-
-		console.log(headerMd);
-		console.log(newHeaderMd);
-		console.log(updatedReadme);
 
 		return updatedReadme;
 	}
@@ -116,7 +99,7 @@ class GenerateBadges {
 			});
 
 			const readmeContent = decode(preContent);
-			const updatedContent = await this._addBadges(readmeContent);
+			const updatedContent = this._addBadges(readmeContent);
 			const encoded64Content = encode(updatedContent);
 			const blob = await this.octokit.git.createBlob({
 				...this.repoInfo,
