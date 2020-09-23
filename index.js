@@ -60,7 +60,7 @@ class GenerateBadges {
 		} = new JSDOM(htmlContent);
 
 		const header = document.querySelector('h1:nth-child(1)');
-		const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
+		const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document).toString();
 
 		const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
 		const newHeaderMd = this.mdParser
