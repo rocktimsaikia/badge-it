@@ -73,7 +73,7 @@ class GenerateBadges {
 		console.log(`content: ${typeof content}`);
 		console.log(`header: ${typeof headerMd}`);
 		console.log(`newHeader: ${typeof newHeaderMd}`);
-		console.log(`updatedReadme T: ${String(content).replace('#', '###')}`);
+		console.log(`updatedReadme T: ${String(content).replace(`${headerMd}`, `${newHeaderMd}`)}`);
 
 		return updatedReadme;
 	}
