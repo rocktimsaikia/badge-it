@@ -1,4 +1,4 @@
-# badge-it ![Build Status](<https://github.com/rocktimsaikia/badge-it/workflows/build/badge.svg>)
+# badge-it ![GitHub](<https://img.shields.io/github/license/RocktimSaikia/badge-it?style=flat-square>) ![GitHub](<https://img.shields.io/github/package-json/v/RocktimSaikia/badge-it?style=flat-square>) ![GitHub](<https://img.shields.io/github/stars/RocktimSaikia/badge-it?style=flat-square>)
 
 > Github action to automatically add [shield badges](<https://shields.io/>) to your README.md :zap:
 
