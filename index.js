@@ -74,6 +74,7 @@ class GenerateBadges {
 		console.log(`header: ${headerMd}`);
 		console.log(`newHeader: ${newHeaderMd}`);
 		const regex = new RegExp(headerMd, 'g');
+		console.log(typeof content);
 		console.log(`updatedReadme T: ${content.replace(regex, newHeaderMd.toString())}`);
 
 		return updatedReadme;
