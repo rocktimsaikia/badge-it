@@ -7,9 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: add badge
-        uses: ./
-        with:
-          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
-          badges: 'gh_license, gh_version, gh_stars'
-          badge-style: 'flat-square'
+      - name: install
+        run: yarn install
+        
+      - name: Linting
+        run: yarn run lint
