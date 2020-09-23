@@ -70,11 +70,11 @@ class GenerateBadges {
 		const updatedReadme = content.replace(headerMd, newHeaderMd);
 
 		console.log('MARKDOWN README running');
-		const strs = '# DbInstallation';
+
 		const strgContent = String(content);
 		console.log(strgContent);
-		console.log(strgContent.includes(strs));
-		console.log(strgContent.indexOf(strs));
+		console.log(strgContent.includes(headerMd));
+		console.log(strgContent.indexOf(headerMd));
 
 		console.log(`header: ${headerMd}`);
 		console.log(`updatedReadme T: ${content}`);
