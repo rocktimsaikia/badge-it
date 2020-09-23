@@ -73,7 +73,7 @@ class GenerateBadges {
 
 		const regex = new RegExp(headerMd, 'gi');
 		console.log(String(content).includes(headerMd));
-		console.log(String(content).includes(regex));
+		console.log(String(content).indexOf(regex));
 
 		console.log(`header: ${headerMd}`);
 		console.log(`updatedReadme T: ${content}`);
