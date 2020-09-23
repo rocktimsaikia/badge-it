@@ -68,21 +68,23 @@ class GenerateBadges {
 				.makeMarkdown(newHeader, document)
 				.replace(/,/gm, ' ');
 
-			const updatedReadme = content.replace(headerMd, newHeaderMd);
-
 			return {
 				headerMd,
-				updatedReadme
+				newHeaderMd
 			};
 		};
 
 		console.log('MARKDOWN README running');
 		const {
 			headerMd,
-			updatedReadme
+			newHeaderMd
 		} = await createMarkDown();
 
+		const updatedReadme = content.replace(headerMd, newHeaderMd);
+
 		console.log(headerMd);
+		console.log(newHeaderMd);
+		console.log(updatedReadme);
 
 		return updatedReadme;
 	}
