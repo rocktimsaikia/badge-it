@@ -82,10 +82,6 @@ class GenerateBadges {
 
 	async init() {
 		try {
-			if (this.action && this.action !== 'closed') {
-				return;
-			}
-
 			const {
 				data: {
 					sha,
