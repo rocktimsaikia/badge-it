@@ -2,8 +2,13 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const showdown = require('showdown');
 const jsDom = require('jsdom');
-const {JSDOM} = jsDom;
-const {encode, decode} = require('node-encoder');
+const {
+	JSDOM
+} = jsDom;
+const {
+	encode,
+	decode
+} = require('node-encoder');
 const util = require('./util');
 
 /**
@@ -33,7 +38,9 @@ class GenerateBadges {
 		// If the readme header is in html then don't markdown it.
 		if (content.includes('<h1>')) {
 			const {
-				window: {document}
+				window: {
+					document
+				}
 			} = new JSDOM(content);
 			const header = document.querySelector('h1:nth-child(1)');
 
@@ -46,7 +53,9 @@ class GenerateBadges {
 		// If header is in markfdown then make it html
 		const htmlContent = this.mdParser.makeHtml(content);
 		const {
-			window: {document}
+			window: {
+				document
+			}
 		} = new JSDOM(htmlContent);
 
 		const header = document.querySelector('h1:nth-child(1)');
@@ -77,7 +86,10 @@ class GenerateBadges {
 			}
 
 			const {
-				data: {sha, content: preContent}
+				data: {
+					sha,
+					content: preContent
+				}
 			} = await this.octokit.request(`GET ${this._getReadmeEndpoint()}`, {
 				headers: {
 					authorization: `token ${this.token}`
@@ -93,6 +105,12 @@ class GenerateBadges {
 				content: encoded64Content,
 				encoding: 'base64'
 			});
+
+			console.log(sha);
+			console.log(blob.data.sha);
+			console.log(readmeContent);
+			console.log(updatedContent);
+			console.log(encoded64Content);
 
 			if (sha !== blob.data.sha) {
 				await this.octokit.request(`PUT ${this._getUpdateEndpint()}`, {
