@@ -71,9 +71,7 @@ class GenerateBadges {
 
 		console.log('MARKDOWN README running');
 
-		const regex = new RegExp(headerMd, 'gi');
-		console.log(String(content).includes(headerMd));
-		console.log(String(content).indexOf(regex));
+		console.log(String(content).includes('# DbInstallation'));
 
 		console.log(`header: ${headerMd}`);
 		console.log(`updatedReadme T: ${content}`);
