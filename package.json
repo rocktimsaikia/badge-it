@@ -32,11 +32,11 @@
 		"@actions/core": "^1.2.5",
 		"@actions/github": "^4.0.0",
 		"jsdom": "^16.4.0",
-		"node-encoder": "^2.0.1",
+		"node-encoder": "^2.0.2",
 		"showdown": "^1.9.1"
 	},
 	"devDependencies": {
-		"@vercel/ncc": "^0.24.0",
+		"@vercel/ncc": "^0.24.1",
 		"xo": "^0.33.1"
 	}
 }
