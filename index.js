@@ -71,9 +71,12 @@ class GenerateBadges {
 
 		console.log('MARKDOWN README running');
 
+		const regex = new RegExp(headerMd, 'gi');
 		console.log(String(content).includes(headerMd));
+		console.log(String(content).includes(regex));
 
-		console.log(`updatedReadme T: ${String(content).replace(`${headerMd}`, `${newHeaderMd}`)}`);
+		console.log(`header: ${headerMd}`);
+		console.log(`updatedReadme T: ${content}`);
 
 		return updatedReadme;
 	}
