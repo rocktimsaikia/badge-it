@@ -70,6 +70,7 @@ class GenerateBadges {
 		const updatedReadme = content.replace(headerMd, newHeaderMd);
 
 		console.log('MARKDOWN README running');
+		console.log(content);
 		console.log(htmlContent);
 		console.log(header);
 		console.log(headerMd);
