@@ -47,6 +47,7 @@ class GenerateBadges {
 			const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
 			const updatedReadme = htmlContent.replace(header.outerHTML, newHeader);
 
+			console.log('HTML README running');
 			return updatedReadme;
 		}
 
@@ -68,6 +69,13 @@ class GenerateBadges {
 
 		const updatedReadme = content.replace(headerMd, newHeaderMd);
 
+		console.log('MARKDOWN README running');
+		console.log(htmlContent);
+		console.log(header);
+		console.log(headerMd);
+		console.log(newHeader);
+		console.log(newHeaderMd);
+		console.log(updatedReadme);
 		return updatedReadme;
 	}
 
@@ -105,12 +113,6 @@ class GenerateBadges {
 				content: encoded64Content,
 				encoding: 'base64'
 			});
-
-			console.log(sha);
-			console.log(blob.data.sha);
-			console.log(readmeContent);
-			console.log(updatedContent);
-			console.log(encoded64Content);
 
 			if (sha !== blob.data.sha) {
 				await this.octokit.request(`PUT ${this._getUpdateEndpint()}`, {
