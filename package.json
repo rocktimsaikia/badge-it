@@ -29,7 +29,7 @@
 	},
 	"homepage": "https://github.com/RocktimSaikia/awesome-project#readme",
 	"dependencies": {
-		"@actions/core": "^1.2.5",
+		"@actions/core": "^1.2.6",
 		"@actions/github": "^4.0.0",
 		"jsdom": "^16.4.0",
 		"node-encoder": "^2.0.2",
